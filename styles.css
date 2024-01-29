@@ -1,0 +1,143 @@
+div {box-sizing: border-box;}
+div {margin: 0;}
+
+p {margin-bottom: 1%;}
+
+/*color logout*/
+#logout {color: red;}
+
+/*para poner los botones a la izquierda REVISAR*/
+.columnaboton { 
+    width: 100%;
+    justify-content: end;
+    }
+    
+
+/*color de fondo tipo de vista*/
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background:rgb(245, 245, 245);
+}
+
+/*tamaño de icono tipo de vistas*/
+#pills-home-tab, #pills-profile-tab {font-size: 80%;}
+#conte2 { padding-top: 1%;}
+
+
+/*Para que las imágenes se ajusten al tamaño del contenedor y mantengan su proporción, 
+puedes establecer la altura del contenedor y utilizar las propiedades de fondo de CSS para mostrar las imágenes como fondo.
+ A continuación, te muestro cómo hacerlo:*/
+/*.img-container {
+    min-height: 300px; //Ajusta la altura según tus necesidades 
+    background-size: cover;
+    background-position: center;
+    margin: 2px;
+
+
+<div class="d-flex flex-row bg-light">
+                        <div class="col-4 img-container"
+                            style="background-image: url('https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2022/06/Golden-Retriever-Puppies.jpeg');">
+                        </div>
+                        <div class="col-4 img-container"
+                            style="background-image: url('https://dam.ngenespanol.com/wp-content/uploads/2021/09/curiosidades-sobre-los-gorilas.jpg');">
+                        </div>
+                        <div class="col-4 img-container"
+                            style="background-image: url('https://www.ngenespanol.com/wp-content/uploads/2023/08/dia-mundial-del-leon-curiosidades-sobre-el-rey-de-la-sabana.jpg');">
+                        </div>
+                    </div>    
+
+}*/
+
+/* ------------------- MULTIPLES VISTA ------------------------ */
+
+
+div.img-container img{width: 100%;
+    min-height: 300px;
+    margin: 0;
+    padding: 2px;
+}
+
+/* ------------------- ESTILO VISTA UNICA ------------------------ */
+
+div.card {width: 500px;
+    margin: auto;}
+
+div.card-header {
+    padding: 1%;
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+div.card-footer:last-child { 
+    background-color: rgba(255, 255, 255, 0);
+}
+
+div.card-body {
+    padding: 0.5%;
+    margin: 0;
+}
+
+div.card-footer {
+    padding: 0.5%;
+    margin-bottom: 2%;
+}
+
+div.card-footer p {
+margin-bottom: 0.1%;
+}
+
+div.card-body img{
+    width: 100%;
+    padding: 1px;
+    margin: 0;
+}
+
+div.card-header {width: 100%;}
+
+div.card-header div:first-child{
+    display: inline-flex;
+    width: 94%;
+    font-size: x-large;
+    text-align: start;
+    /*background: red;*/
+    padding: 0%;
+}
+
+div.card-header div:last-child{
+    display: inline-flex;
+    width: 5%;
+    font-size: small;
+    text-align: end;
+    justify-content: end;
+    /*background: blue;*/
+    padding: 0%;
+}
+
+.piepubl {font-size: small;}
+
+/* ----------------------- ESTILO DE ICONOS NEW POST ----------------------------*/
+.styled{ margin-right: 1%;}
+.styled {
+    border: 0;
+    padding: 1.5% 2.5% 1.5% 2.5% ;
+    font-size: 12px;
+    text-align: center;
+    color: #010101;
+    text-shadow: #000;
+    border-radius: 4px;
+    background-color: rgb(245, 245, 245);
+    box-shadow:
+      inset 2px 2px 3px rgb(255 255 255 / 50%)/*,
+      inset -2px -2px 3px rgb(0 0 0 / 50%);*/
+  }
+  
+  .styled:hover {
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .styled:active {
+    box-shadow:
+      inset -2px -2px 3px rgb(255 255 255 / 60%),
+      inset 2px 2px 3px rgb(0 0 0 / 60%);
+  }
+  

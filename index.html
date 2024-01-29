@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid p-1">
+        <div class="row bg-light">
+            <div class="col-7">
+                <a class="navbar-brand text-dark" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <!---------------------------------------------------------BOTON CREATE---------------------------------------------------->
+            <div class="col columnaboton">
+                    <!-- Botón que activa el formulario modal -->
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#formularioModal">
+                        Create a new post 
+                    </button>
+                <!-- Modal con el formulario específico -->
+                <div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- formulario específico aquí -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Caption:</label>
+                                        <textarea class="form-control mb-2" id="exampleFormControlTextarea1"
+                                            rows="3" placeholder="Add the caption of your post here"></textarea>
+                                        
+                                            <button type="button" class="styled"><i class="fa-solid fa-camera"></i></button>
+                                            <button type="button" class="styled"><i class="fa-solid fa-location-dot"></i></button>
+                                    
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------------------------------------------BOTON PERFIL---------------------------------------------------->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Accessibility</a>
+                        <a class="dropdown-item" href="#">Privacy and Data</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="logout" href="#">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------TIPO DE VISTAS---------------------------------------------------->
+        <div class="contaimer-fluid" id="conte2">
+            <ul class="nav justify-content-center nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active text-dark" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+                </li>
+                <li class="nav-item text-dark" role="presentation">
+                    <button class="nav-link text-dark" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"><i class="fa-solid fa-stop"></i></button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <!---------------------------------------------------------VISTA MULTIPLE---------------------------------------------------->
+
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <!---------------------------------------------------------CARGA IMAGENES---------------------------------------------------->
+                    <div class="d-flex flex-row bg-light">
+                        <div class="col-4 img-container"> <img
+                                src="https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2022/06/Golden-Retriever-Puppies.jpeg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://dam.ngenespanol.com/wp-content/uploads/2021/09/curiosidades-sobre-los-gorilas.jpg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://www.ngenespanol.com/wp-content/uploads/2023/08/dia-mundial-del-leon-curiosidades-sobre-el-rey-de-la-sabana.jpg"></img>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row bg-light">
+                        <div class="col-4 img-container"> <img
+                                src="https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2022/06/Golden-Retriever-Puppies.jpeg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://dam.ngenespanol.com/wp-content/uploads/2021/09/curiosidades-sobre-los-gorilas.jpg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://www.ngenespanol.com/wp-content/uploads/2023/08/dia-mundial-del-leon-curiosidades-sobre-el-rey-de-la-sabana.jpg"></img>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row bg-light">
+                        <div class="col-4 img-container"> <img
+                                src="https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2022/06/Golden-Retriever-Puppies.jpeg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://dam.ngenespanol.com/wp-content/uploads/2021/09/curiosidades-sobre-los-gorilas.jpg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://www.ngenespanol.com/wp-content/uploads/2023/08/dia-mundial-del-leon-curiosidades-sobre-el-rey-de-la-sabana.jpg"></img>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row bg-light">
+                        <div class="col-4 img-container"> <img
+                                src="https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2022/06/Golden-Retriever-Puppies.jpeg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://dam.ngenespanol.com/wp-content/uploads/2021/09/curiosidades-sobre-los-gorilas.jpg"></img>
+                        </div>
+                        <div class="col-4 img-container"> <img
+                                src="https://www.ngenespanol.com/wp-content/uploads/2023/08/dia-mundial-del-leon-curiosidades-sobre-el-rey-de-la-sabana.jpg"></img>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------------------------------------------VISTA UNA---------------------------------------------------->
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <!---------------------------------------------------------POST---------------------------------------------------->
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <p>The Golden Retriever</p>
+                            </div>
+                            <div>
+                                <p>01/24</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <img
+                                src="https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2022/06/Golden-Retriever-Puppies.jpeg"></img>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <p><strong>1061 Likes</p></strong>
+                            </div>
+                            <div>
+                                <p class="piepubl">Los golden retriever son un verdadero perro familiar. Les encanta nadar (¡incluso con
+                                    sus humanos!), correr y jugar en el exterior. Son muy sociables, por lo que una
+                                    familia grande y activa es ideal para ellos. También necesitan abundante afecto y
+                                    caricias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <p>The Gorilla</p>
+                            </div>
+                            <div>
+                                <p>02/24</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <img
+                                src="https://dam.ngenespanol.com/wp-content/uploads/2021/09/curiosidades-sobre-los-gorilas.jpg"></img>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <p><strong>1103 Likes</p></strong>
+                            </div>
+                            <div>
+                                <p class="piepubl">LEl gorila es el más grande de los primates vivos (tan solo los machos llegan a medir
+                                    hasta 1,75 m de altura, y alcanzar pesos entre los 140 y 200 kg; las hembras no
+                                    suelen superar los 100 kg). Su semejanza con el ser humano es muy cercana. Su ADN es
+                                    un 97-98 % igual al de nuestra especie, solo superado por las dos especies de
+                                    chimpancé existentes. Demos un repaso por algunas curiosidades sobre los gorilas,
+                                    criaturas imponentes sobre las cuales todavía queda mucho por aprender.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <p>The Lion</p>
+                            </div>
+                            <div>
+                                <p>03/24</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <img
+                                src="https://www.ngenespanol.com/wp-content/uploads/2023/08/dia-mundial-del-leon-curiosidades-sobre-el-rey-de-la-sabana.jpg"></img>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <p><strong>1201 Likes</p></strong>
+                            </div>
+                            <div>
+                                <p class="piepubl">Los leones duermen la mayor parte del día. Suelen cazar de noche o temprano en la
+                                    mañana. Eso es porque es más fácil acercarse sigilosamente a las presas en la
+                                    oscuridad. Los ojos de los leones se adaptan fácilmente en pocas condiciones de luz,
+                                    ¡así que merodear entre las sombras no es un problema!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------POST---------------------------------------------------->
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------CONTENEDOR---------------------------------------------------->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+</html>
