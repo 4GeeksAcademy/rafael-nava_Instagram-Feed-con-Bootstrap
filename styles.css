@@ -1,3 +1,9 @@
+body
+{
+    font-family: Helvetica, Sans-Serif;
+    color: #444444;
+}
+
 div {box-sizing: border-box;}
 div {margin: 0;}
 
@@ -6,12 +12,16 @@ p {margin-bottom: 1%;}
 /*color logout*/
 #logout {color: red;}
 
-/*para poner los botones a la izquierda REVISAR*/
-.columnaboton { 
-    width: 100%;
-    justify-content: end;
+/*para poner los botones a la izquierda*/
+#botones1 { 
+    padding-left:4%;
     }
+
     
+.Create {font-size: medium;
+margin-right: 4%;}
+
+#logo1 i, a {font-size: 120%;}
 
 /*color de fondo tipo de vista*/
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -51,7 +61,7 @@ puedes establecer la altura del contenedor y utilizar las propiedades de fondo d
 
 
 div.img-container img{width: 100%;
-    min-height: 300px;
+    height: 300px;
     margin: 0;
     padding: 2px;
 }
