@@ -12,6 +12,10 @@ p {margin-bottom: 1%;}
 /*color logout*/
 #logout {color: red;}
 
+.colorselect:focus { 
+    background: grey;
+}
+
 /*para poner los botones a la izquierda*/
 #botones1 { 
     padding-left:4%;
